@@ -21,8 +21,7 @@
     "start": "node dist/server/node-build.mjs",
     "test": "vitest --run",
     "format.fix": "prettier --write .",
-    "typecheck": "tsc",
-    "postinstall": "npm run build"
+    "typecheck": "tsc"
 
   },
   "dependencies": {
