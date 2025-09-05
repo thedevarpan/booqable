@@ -1,12 +1,16 @@
 import { defineConfig } from "vite";
 import path from "path";
+import { fileURLToPath } from "url";
+
+// Fix for __dirname in ESM
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 export default defineConfig({
   build: {
-    ssr: true,
+    ssr: "server/start.ts", // direct entry file
     outDir: "dist/server",
     rollupOptions: {
-      // Server ka entry point (yaha tumne banaya hoga server/start.ts)
       input: path.resolve(__dirname, "server/start.ts"),
     },
   },

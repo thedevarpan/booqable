@@ -21,7 +21,8 @@
     "start": "node dist/server/start.js",
     "test": "vitest --run",
     "format.fix": "prettier --write .",
-    "typecheck": "tsc"
+   "typecheck": "tsc",
+  "postinstall": "npm run build"
 
   },
   "dependencies": {
